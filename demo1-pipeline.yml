@@ -74,6 +74,8 @@ stages:
           - template: tests/display-env.yml@templates
           - template: tests/display-files.yml@templates
           - template: pipeline/initialize-pipeline.yml@templates
+            parameters:
+              variablesRepoName: ''
           - template: tests/display-env.yml@templates
           - template: tests/display-files.yml@templates
           - template: functions/new-function.yml@templates
