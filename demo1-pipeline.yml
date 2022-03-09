@@ -56,7 +56,7 @@ stages:
               expectations:
                 env: ci
                 productName: "My First Demo Product"
-                envSubscription: "myorg-devtest-subscription"
+                varEnvSubscription: "myorg-devtest-subscription"
                 varResourceGroupTypeName: "rg"
                 varFunctionsTypeName: "func"
                 varVnetTypeName: "vnet"
@@ -82,7 +82,7 @@ stages:
               expectations:
                 env: a1
                 productName: "My Second Demo Product"
-                envSubscription: "myorg-production-subscription"
+                varEnvSubscription: "myorg-production-subscription"
       - job: DemoJob13
         dependsOn: DemoJob12
         condition: eq('${{ parameters.env }}', 'ci')
@@ -105,7 +105,7 @@ stages:
               expectations:
                 env: t3
                 productName: "My Third Demo Product"
-                envSubscription: "myorg-devtest-subscription"
+                varEnvSubscription: "myorg-devtest-subscription"
   - stage: DemoStage2
     condition: succeeded()
     jobs:
